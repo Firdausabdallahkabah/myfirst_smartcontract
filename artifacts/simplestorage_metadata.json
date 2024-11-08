@@ -6,6 +6,19 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newfavoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "Numberupdated",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "activateContract",
 				"outputs": [],
@@ -109,6 +122,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getfavoriteNumberMap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "isActive",
 				"outputs": [
@@ -135,6 +167,25 @@
 						"internalType": "bool",
 						"name": "",
 						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameTofavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -228,6 +279,25 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "updatdeName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -258,11 +328,11 @@
 	},
 	"sources": {
 		"simplestorage.sol": {
-			"keccak256": "0x0ef94b91587cd4fae08b2d53d0aba57d1dd26da46de70c982b181111349f8c64",
+			"keccak256": "0xfae2d1bfc3dcabea6b4f934ea8c79c31e2ada483036e4aa3ca1bb795aa8ac48c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8ed3aff79567dae07d13cb62d1a2fec20e512582464bc9d032a2e3bc91ee10c9",
-				"dweb:/ipfs/QmYiZBU83Akzf1q4se75N62VVUTBwdHBUhSsY2QAbnTzsc"
+				"bzz-raw://a0da852d00aa5abda94a58ec07786618e2c0b9e978b680eca3f8ca71bc248c31",
+				"dweb:/ipfs/Qmbeo5XaQbLpvKAa9cfmg6bas9pEKXbaJ4eV2jqoVJagxT"
 			]
 		}
 	},

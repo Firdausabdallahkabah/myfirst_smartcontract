@@ -13,8 +13,15 @@ contract simplestorage {
         uint256 favoriteNumber; // their favourite number
     }
 
-    Person[] public people; //array of person sturcts store multiple people'sdata
+    Person[] public people; 
+    mapping (string => uint256) public nameTofavoriteNumber;
+
+    event Numberupdated (uint256 newfavoriteNumber);
+
+
     //Enum to manage contract states (Active or nactive)
+
+    
 
     enum contractstate {
         Active, //state representing an active contract
@@ -24,6 +31,7 @@ contract simplestorage {
 
     function storeNumber(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
+        emit Numberupdated(favoriteNumber);
     }
 
     function getfavoriteNumber() public view returns (uint256) {
@@ -74,7 +82,13 @@ contract simplestorage {
 
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         people.push(Person(_name,_favoriteNumber));
+        nameTofavoriteNumber[_name] = _favoriteNumber;
     }
+
+    function getfavoriteNumberMap (string memory _name) public view returns (uint256) {
+        return nameTofavoriteNumber[_name];
+    }
+    //implement an enum
 
     function activateContract() public {
         state = contractstate.Active;
@@ -87,4 +101,11 @@ contract simplestorage {
     function isActive() public view returns (bool) {
         return state ==contractstate.Active;
     }
+
+    function updatdeName(string memory _name) public pure returns(string memory){
+
+    }
+
+
+
 }
